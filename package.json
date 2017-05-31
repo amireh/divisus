@@ -1,0 +1,38 @@
+{
+  "name": "divisus",
+  "version": "1.0.0",
+  "description": "Distributed application of functions.",
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "eslint lib",
+    "test": "mocha -r lib/index.js -r lib/__tests__/utils/index.js --reporter dot 'lib/**/*.test.js'",
+    "test:coverage": "nyc npm test",
+    "coverage": "nyc report",
+    "coverage:html": "nyc report --reporter html",
+    "coverage:ci": "nyc report --reporter=text-lcov > tmp/coverage.lcov && codecov --disable search -f tmp/coverage.lcov"
+  },
+  "author": "Ahmad Amireh",
+  "license": "BSD-3",
+  "devDependencies": {
+    "chai": "4.0.0",
+    "eslint": "3.19.0",
+    "eslint-plugin-mocha": "4.9.0",
+    "mocha": "3.4.2",
+    "nyc": "10.3.2",
+    "sinon": "2.3.2"
+  },
+  "dependencies": {
+    "async": "2.4.1",
+    "invariant": "2.2.2",
+    "ramda": "0.24.0",
+    "serialize-error": "2.1.0"
+  },
+  "nyc": {
+    "include": [
+      "lib/*.js"
+    ],
+    "exclude": [
+      "lib/__tests__/**/*"
+    ]
+  }
+}
