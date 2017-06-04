@@ -1,6 +1,6 @@
 {
   "name": "divisus",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Distributed application of functions.",
   "main": "lib/index.js",
   "scripts": {
