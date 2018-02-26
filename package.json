@@ -23,7 +23,7 @@
     "sinon": "2.3.2"
   },
   "dependencies": {
-    "async": "2.4.1",
+    "async": "2.5.0",
     "invariant": "2.2.2",
     "ramda": "0.24.1",
     "serialize-error": "2.1.0"
